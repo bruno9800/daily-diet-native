@@ -1,0 +1,28 @@
+import { TextInput } from "react-native";
+import { css, styled } from "styled-components/native";
+
+export const Container = styled.View`
+  align-items: flex-start;
+  gap: 4px;
+`
+
+export  const Describe = styled.Text`
+  ${({theme}) => css`
+    font-family: ${theme.FONT_FAMILY.REGULAR};
+    font-size: ${theme.FONT_SIZE.SM}px;
+    color: ${theme.COLORS.GRAY_200};
+  `}
+  line-height: 18.2px;
+`
+
+export  const InputStyled = styled(TextInput)`
+  padding: 14px;
+  border: 1px solid ${(props) => props.theme.COLORS.GRAY_500};
+  border-radius: 6px;
+  width: 100%;
+  flex-wrap: wrap;
+  max-height: 92px;
+  
+  
+`
+
